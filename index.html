@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greet User</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #e0f7fa;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #greeting {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Say Hello </h2>
+
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <button onclick="sayHello()">Greet Me</button>
+
+  <div id="greeting"></div>
+
+  <script>
+    function sayHello() {
+      const name = document.getElementById('nameInput').value.trim();
+      const greetingDiv = document.getElementById('greeting');
+
+      if (name === '') {
+        greetingDiv.innerText = "Please enter your name!";
+      } else {
+        greetingDiv.innerText = `Hello, ${name}! Welcome!`;
+      }
+    }
+  </script>
+
+</body>
+</html>
